@@ -11,22 +11,44 @@
   align-items: center;
   cursor: pointer;
 }
-
-.deleteX {
-  cursor: pointer;
-  font-size: 14px;
-  border: 1px solid rgb(205, 189, 7);
-  padding: 0 6px;
-  background-color: #9fa847;
-  color: rgb(44, 44, 90);
-  font-weight: 400;
+/* @keyframes hover {
+  0% {
+    background-color: #00aaff;
+    padding: 12px 16px;
+  }
+  100% {
+    background-color: #d25757;
+    padding: 12px 89px;
+  }
 }
 
-.deleteX:hover {
-  background-color: #c6d45f;
-}
+.todoItem:hover {
+  background-color: #c4d257;
+  padding: 12px 89px;
+  transition: all 0.7s ease-in-out;
+  animation: hover 0.7s ease-in-out;
+} */
 
 .strikethrough {
   text-decoration: line-through;
+  color: #ff0000;
+}
+
+.todoItemLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  gap: 12px;
+}
+
+.fatrashcan {
+  cursor: pointer;
+  font-size: 12px;
+  color: navy;
+  font-weight: 400;
+}
+
+.fatrashcan:hover {
   color: #ff0000;
 }

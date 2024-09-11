@@ -19,15 +19,15 @@ export default function TodoItem({ item, todos, setTodos, id }) {
 
   return (
     <div className={styles.todoItem}>
-      <h3 className={strikethrough} onClick={() => handleStatus(id)}>
-        {item.name}
-      </h3>
-      <h3
-        className={`${styles.deleteX} ${strikethrough}`}
+      <div className={styles.todoItemLeft}>
+        <input type="checkbox" onChange={() => handleStatus(id)} />
+        <h3 className={strikethrough}>{item.name}</h3>
+      </div>
+
+      <i
+        className={`fa-solid fa-trash-can ${strikethrough} ${styles.fatrashcan}`}
         onClick={() => handleDelete(id)}
-      >
-        x
-      </h3>
+      ></i>
     </div>
   );
 }

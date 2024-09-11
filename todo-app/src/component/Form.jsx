@@ -16,9 +16,9 @@ export default function Form({ todos, setTodos, msg, setMsg }) {
       ) {
         alert("This task already exists!");
       } else {
-        setTodos([...todos, todo]);
-        setTodo({ name: "", done: false });
-        localStorage.setItem("todos", JSON.stringify([...todos, todo]));
+        setTodos([...todos, todo]); //this updates the todos array which was initally set to empty, and then populates it each time a new todo is added, while also spreading the previous todos in that array and adding the new todo to the end of the array.
+        setTodo({ name: "", done: false }); //this updates the input field by resetting it back to default useState.
+        localStorage.setItem("todos", JSON.stringify([...todos, todo])); //this saves the updated todos array to local storage.
       }
     } else {
       alert("Please enter a task");
